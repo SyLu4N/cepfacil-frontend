@@ -1,4 +1,4 @@
-import { Local } from '@/@types/Local';
+import { Local } from '../@types/Local';
 
 export async function fetchLocais() {
   try {
