@@ -8,7 +8,7 @@ import { Footer } from './components/Footer';
 import { ligthTheme } from './styles/themes';
 import { CepProvider } from './context/CepContext';
 
-type themeStorageProps = {
+type ThemeStorageProps = {
   type: string;
   body: string;
   text: string;
@@ -18,11 +18,11 @@ type themeStorageProps = {
 export default function App() {
   const getThemeStorage = localStorage.getItem('theme');
 
-  if (!getThemeStorage) return;
-  const themeStorage: themeStorageProps = JSON.parse(getThemeStorage);
-  const themeFixed = themeStorage || ligthTheme;
+  const themeStorage: ThemeStorageProps = getThemeStorage
+    ? JSON.parse(getThemeStorage)
+    : ligthTheme;
 
-  const [theme, setTheme] = useState(themeFixed);
+  const [theme, setTheme] = useState(themeStorage);
 
   useEffect(() => {
     localStorage.setItem('theme', JSON.stringify(theme));
