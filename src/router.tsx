@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React from 'react';
 
 import Home from './pages/home';
-import { Local } from './pages/Local';
+import Local from './pages/Local';
 import Error from './pages/404';
 
 export const MainRouter = () => {

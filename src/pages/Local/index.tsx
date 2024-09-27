@@ -5,7 +5,7 @@ import { Container, Content, Locais, Void } from './styled';
 import { Link } from 'react-router-dom';
 import { useCep } from '../../hooks/useCep';
 
-export function Local() {
+export default function Local() {
   const { locais } = useCep();
 
   return (
